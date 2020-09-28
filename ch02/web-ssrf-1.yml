@@ -1,0 +1,21 @@
+version: "3"
+services:
+  web:
+    image: registry.cn-beijing.aliyuncs.com/n1book/web-ssrf-1:latest
+    depends_on: 
+      - redis
+      - vuln
+      - mysql
+    ports:
+      - "8233:80"
+
+  redis:
+    image: registry.cn-beijing.aliyuncs.com/n1book/web-ssrf-2:latest
+
+  vuln:
+    image: registry.cn-beijing.aliyuncs.com/n1book/web-ssrf-3:latest
+
+  mysql:
+    image: registry.cn-beijing.aliyuncs.com/n1book/web-ssrf-4:latest
+    environment:
+      - MYSQL_RANDOM_ROOT_PASSWORD=yes

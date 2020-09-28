@@ -1,0 +1,7 @@
+version: "3.2"
+
+services:
+  converter:
+    image: registry.cn-hangzhou.aliyuncs.com/n1book/web-unserialize:latest
+    ports:
+      - 80:80

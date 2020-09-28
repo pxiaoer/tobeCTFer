@@ -1,0 +1,7 @@
+version: "3.2"
+
+services:
+  converter:
+    image: registry.cn-hangzhou.aliyuncs.com/n1book/web-crypto-padding:latest
+    ports:
+      - 80:1234
